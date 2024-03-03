@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 
 class MainActivity : ComponentActivity() {
@@ -16,6 +17,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var locationEditText: EditText
     private lateinit var typeEditText: EditText
     private lateinit var addRessourceButton: Button
+    private lateinit var textViewError: TextView
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +27,7 @@ class MainActivity : ComponentActivity() {
         locationEditText = findViewById(R.id.locationsEditText)
         typeEditText = findViewById(R.id.typeEditText)
         addRessourceButton = findViewById(R.id.addRessourceButton)
+        textViewError = findViewById(R.id.textViewError)
 
         val tableLayout: TableLayout = findViewById(R.id.tableLayout)
 
@@ -81,6 +84,9 @@ class MainActivity : ComponentActivity() {
              locationEditText.setText("")
              nameEditText.setText("")
              typeEditText.setText("")
+             textViewError.visibility = TextView.GONE
+         }else{
+             textViewError.visibility = TextView.VISIBLE
          }
     }
     private fun addHeader(tableLayout:TableLayout,newName:String,newLocation:String,newType:String) {
@@ -93,7 +99,6 @@ class MainActivity : ComponentActivity() {
             nameTextView.setBackgroundResource(R.drawable.bordered_cell_background)
             typeTextView.setBackgroundResource(R.drawable.bordered_cell_background)
             locationTextView.setBackgroundResource(R.drawable.bordered_cell_background)
-
 
             row.addView(nameTextView)
             row.addView(locationTextView)
