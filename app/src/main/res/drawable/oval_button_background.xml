@@ -1,0 +1,6 @@
+<!-- oval_button_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="100dp" /> <!-- Adjust the radius to make it oval -->
+    <solid android:color="#500080" /> <!-- Change the color to purple -->
+</shape>
