@@ -1,23 +1,8 @@
 Proposal : 615929 (# Problem 1 : MainActivity)
- 	Default Page
-					
 
- 
- 	Adding without all the fields
+Problem 2# Amazone Login
 
- 
-
-
-
- 	Adding a new Water Ressource
-
-Before           								After
-
-
-
-
-
-
-Readme on The assignement docx file
+Amazone Login
+["amazone login](screenshots/amazone_login-1.png)
 	
  

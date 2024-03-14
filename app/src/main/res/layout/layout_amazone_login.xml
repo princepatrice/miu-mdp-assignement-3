@@ -1,51 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".MainActivity"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_width="match_parent"
+    android:background="@color/amazon_bg">
 
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:hint="water ressource name"
-        />
-    <EditText
-        android:id="@+id/locationsEditText"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:hint="location"
-        />
-
-
-    <EditText
-        android:id="@+id/typeEditText"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:hint="type"
-        />
-
-    <Button
-        android:id="@+id/addRessourceButton"
-        android:layout_width="120dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20px"
-        android:layout_gravity="center"
-        android:textAllCaps="false"
-        android:background="@drawable/oval_button_background"
-        android:padding="5dp"
-        android:text="Add"
-        android:textColor="#ffffff" />
-
-    <TableLayout
-        android:id="@+id/tableLayout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        android:padding="16dp"
-        android:layout_marginTop="20px"
-        />
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/amazon_logo"
+            android:contentDescription="@string/amazone_logo"
+            android:layout_marginTop="20dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amazone_sigin_invite"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/purple_500"
+                android:text="@string/forgot_password"
+                android:textSize="18sp"
+                android:gravity="end" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bordered_cell_background"
+            android:layout_marginTop="30dp"
+            >
+
+            <EditText
+                android:id="@+id/emailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email_phone_for_mobile_account"
+                android:autofillHints="Email"
+                android:textSize="16sp"
+                android:padding="15dp"
+                android:background="@android:color/transparent"
+                />
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="?android:attr/listDivider"/>
+
+            <EditText
+                android:id="@+id/passwordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:autofillHints="Password"
+                android:textSize="16sp"
+                android:padding="15dp"
+                android:background="@android:color/transparent"
+                />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/show_password"
+            android:layout_marginTop="10dp"
+            />
+
+      
+
+              <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+
+           <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keep_me_sign_in"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail"
+                android:paddingLeft="1dp"
+                android:textColor="@color/purple_500"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signInBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/amazonYellow"
+
+            />
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/new_to_amazone"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="-13dp"
+            android:paddingHorizontal="15dp"
+            android:background="@color/amazon_bg"
+            />
 
 
-</LinearLayout>
+        <Button
+            android:id="@+id/createAccountBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_a_new_account"
+            android:layout_marginVertical="15dp"
+            android:textColor="@android:color/black"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/amazonLight"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:text="@string/conditions_of_use_of_privacy_notice"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/amzone_copyright"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</ScrollView>
